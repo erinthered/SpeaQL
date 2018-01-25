@@ -1,0 +1,28 @@
+{
+  "intents": [
+    {
+      "name": "AMAZON.CancelIntent",
+      "samples": []
+    },
+    {
+      "name": "AMAZON.HelpIntent",
+      "samples": []
+    },
+    {
+      "name": "AMAZON.StopIntent",
+      "samples": []
+    },
+    {
+      "name": "QueryDatabaseIntent",
+      "samples": [
+        "SpeaQL {how many customers do we have|Query}"
+      ],
+      "slots": [
+        {
+          "name" : "Query",
+          "type" : "AMAZON.LITERAL"
+        }
+      ]
+    }
+  ]
+}

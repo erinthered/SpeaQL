@@ -1,0 +1,25 @@
+{
+  "name": "SpeaQL",
+  "version": "1.0.0",
+  "description": "Query a database with Alexa",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "alexa",
+    "skill",
+    "sql"
+  ],
+  "author": "winterns",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "alexa-sdk": "^1.0.12",
+    "apiai": "^4.0.3",
+    "https": "^1.0.0",
+    "index": "^0.4.0",
+    "mssql": "^4.1.0",
+    "node-dijkstra": "^2.5.0",
+    "requests": "^0.2.2"
+  }
+}
