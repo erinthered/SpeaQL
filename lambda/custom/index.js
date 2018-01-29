@@ -8,8 +8,8 @@ const https = require('https');
 const apiai = require('apiai');
 
 // Amazon and DialogFlow API tokens
-const APP_ID = 'amzn1.ask.skill.e40ee34f-e289-4920-8f14-74500c9de490';
-const AIAPI_DEV_ACCESS_TOKEN = 'ab74b3a10ba84131b712203b6304e877'; 
+const APP_ID = 'YOUR_AMAZON_ID';
+const AIAPI_DEV_ACCESS_TOKEN = 'YOUR_DIALOGFLOW_ID'; 
 
 const app = apiai(AIAPI_DEV_ACCESS_TOKEN);
 const SKILL_NAME = 'SpeaQL';
