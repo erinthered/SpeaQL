@@ -78,7 +78,7 @@ const handlers = {
             }
             function getColumnNameforColumn(columnLongName) {
                 var columnNameArr = parseColumnName(columnLongName);
-                columnName = columnNameArr[2];
+                var columnName = columnNameArr[2];
                 return columnName;
             }
 
@@ -275,33 +275,60 @@ const handlers = {
                 statement = `SELECT\n\t${sqlVal}(${sqlParameter})\nFROM\n${tablesRequired.map(t => '\tSalesLT.' + t).join(',\n')}\nWHERE\n\t${relationsRequired.join(' AND\n\t')};`;
             }
 
-            // console.log("Statement is:\n", statement);
+            console.log("Statement is:\n", statement);
 
             // Connect to database, query with statement, send response to Alexa
+            var returnText = "Something went wrong, sire.";
             sql.connect("mssql://winternsadmin:January999!@urtinterns.database.windows.net/adventureworks?encrypt=true")
                 .then(pool => {
                     return pool.request()
                         .query(statement)
                         .then(result => {
-                            // console.dir("The answer is " + result.recordset.toTable().rows[0].toString());
-                            returnText = "The answer is " + result.recordset.toTable().rows[0].toString();
-                            // console.log(returnText);
-
+                            if(result.recordset && result.recordset.toTable().rows.length>0) {
+                                console.dir("The answer is " + result.recordset.toTable().rows[0].toString());
+                                returnText = "The answer is " + result.recordset.toTable().rows[0].toString();
+                            }
+                            else {
+                                returnText = "Zero rows were returned from the database sire.";
+                            }
+                            console.log(returnText);
                             return returnText;
-                        }) 
+                        })
+                        .then(returnText => {
+                            // Send response to Alexa Skill
+                            self.response.speak(returnText);
+                            self.emit(':responseReady');
+                            console.log("Closing sql now...");
+                            sql.close();
+                            console.log("sql closed");
+                        })
+                        .catch((e) => {
+                            console.error(e);
+                            returnText = "That was not something I can query from the database. Please try again, sire.";
+                            //returnText = "There was a problem with the SQL connection." + e.toString();
+                            self.response.speak(returnText);
+                            self.emit(':responseReady');
+                            console.log("Closing sql now...");
+                            sql.close();
+                            console.log("sql closed");
+                        })
+                        .finally(() => {
+                            // console.log("Closing SQL connection");
+                            // sql.close(); 
+                            console.log("Done");
+                        });
+
                 })
-                .then(returnText => {
-                    // Send response to Alexa Skill
-                    self.response.speak(returnText);
-                    self.emit(':responseReady');
-                })
-                .then(() => {
-                    sql.close();
-                });
+                .catch(() => {
+                    self.response.speak("Cannot connect to db");
+                }); 
+
          });
 
         request.on('error', function(error) {
-           console.log(error);
+            this.response.speak("The query was boned, sire.");
+            this.emit(':responseReady');
+            console.log(error);
         });
 
         request.end();

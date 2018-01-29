@@ -15,7 +15,7 @@
     {
       "name": "QueryDatabaseIntent",
       "samples": [
-        "SpeaQL {how many customers do we have|Query}"
+          "SpeaQL {how many customers do we have|Query}"
       ],
       "slots": [
         {

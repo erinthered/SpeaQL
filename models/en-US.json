@@ -17,47 +17,9 @@
                 "samples": []
               },
               {
-                "name": "                 ",
+                "name": "QueryDatabaseIntent",
                 "samples": [
                   "SpeaQL {how many customers do we have|Query}"
-                  "SpeaQL {which state are sharp bikes sold|Query}"
-                  "SpeaQL {how many products are sold in Washington|Query}"
-                  "SpeaQL {how many states sell our products|Query}"
-                  "SpeaQL {where are our most expensive products sold|Query}"
-                  "SpeaQL {what is the largest unit price of our products sold in Washington|Query}"
-                  "SpeaQL {what is the smallest unit price of our products sold in Washington|Query}"
-                  "SpeaQL {how many cities sell our products|Query}"
-                  "SpeaQL {how many addresses are listed in our company|Query}"
-                  "SpeaQL {how many phone numbers are listed in our company|Query}"
-                  "SpeaQL {how many customers buy our products in total|Query}"
-                  "SpeaQL {who is the salesperson for progressive sports|Query}"
-                  "SpeaQL {which salesman sold the most products in our company|Query}"
-                  "SpeaQL {which saleswoman sold the most products in our company|Query}"
-                  "SpeaQL {which salesman sold the least products for progressive sports|Query}"
-                  "SpeaQL {which saleswoman sold the least products for progressice sports|Query}"
-                  "SpeaQL {what is the highest order quantity for products sold in our company}|Query}"
-                  "SpeaQL {what is the least order quantity for products sold in our company}|Query}"
-                  "SpeaQL {where are most of our products sold in our company}|Query}"
-                  "SpeaQL {how many customers do we have in texas}|Query}"
-                  "SpeaQL {how many mountain bikes have we sold|Query}"
-                  "SpeaQL {what is the list price for a AWC Logo cap|Query}"
-                  "SpeaQL {how many mountain bikes have we sold|Query}"
-                  "SpeaQL {what is the sell start date for a AWC Logo cap}|Query}"
-                  "SpeaQL {what is the sell end date for a AWC Logo cap}|Query}"
-                  "SpeaQL {how many email addresses are listed in our company}|Query}"
-                  "SpeaQL {how many customers buy our products in New York}|Query}"
-                  "SpeaQL {how many customers buy our products in Los Angeles}|Query}"
-                  "SpeaQL {what is the lowest unit price for products sold in New York}|Query}"
-                  "SpeaQL {what is the highest unit price for products sold in New York}|Query}"
-                  "SpeaQL {how many salespeople are in our company}|Query}"
-                  "SqeaQL {how many purchases do we have from chic department stores}|Query}"
-                  "SqeaQL {how many customers purchase our products from Elite bikes|Query}"
-                  "SqeaQL {who is the salesperson for the all cycle shop}|Query}"
-                  "SqeaQL {who is the salesperson for the orange bicycle company}|Query}"
-                  "SqeaQL {what is the phone number for riding bicycles|Query}"
-                  "SqeaQL {what is the middle name of the one bike company|Query}"
-                  "SqeaQL {who is the salesperson of the gear store|Query}"
-                  "SqeaQL {who is the salesperson for progressive sports|Query}"
                 ],
                 "slots": [
                   {
