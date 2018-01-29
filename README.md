@@ -1,9 +1,7 @@
-# SpeaQL
+# SpeaQL ![alt tag](/assets/speaql_logo.jpg)
 
 ## Project Overview
 This project allows the user to query the AdventureWorks database (https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)
-
-![alt tag](/assets/speaql_logo)
 
 ## Running & Testing
 In order to run and test this program properly, users must have a command-line interface, Amazon Developer Account, Amazon AWS account, Node.js dependencies, DialogFlow, and the AdventureWorks database installed. 
