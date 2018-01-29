@@ -1,3 +1,4 @@
 .DS_Store
+.ask
 /lambda/custom/node_modules
 /lambda/custom/lambda.zip

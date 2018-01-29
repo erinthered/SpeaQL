@@ -1,4 +1,4 @@
-# SpeaQL ![alt tag](/assets/speaql_logo.jpg)
+# SpeaQL
 
 ## Project Overview
 This project allows the user to query the AdventureWorks database (https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)
